@@ -61,12 +61,15 @@ public class Feeding {
             for(Philosopher ph: philosophers){
                     
                 
+                
+                
                 ph.start();
+            
                 
                 
             }
         
         
     }
-    
+
 }

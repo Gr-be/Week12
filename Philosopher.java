@@ -4,8 +4,6 @@
 package com.mycompany.philsophers;
 
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -32,7 +30,8 @@ public class Philosopher extends Thread {
         if (attempt == false) {
             System.out.println("Philosopher " + pID + " is waiting. He has eaten " + timesEaten + " times.");
             while (attempt == false) {
-
+                
+                
                 attempt = troughposition.startEating(pID);
                 if (attempt == true) {
                     break;
@@ -51,8 +50,9 @@ public class Philosopher extends Thread {
 
             Thread.sleep(num);
         } catch (InterruptedException ex) {
+            System.out.println("Failed");
         }
-        
+
         }
         System.out.println(                                                     "Philosopher "+pID+ " has left the trough. "+ "He ate "+ timesEaten+ " times and is full.");
     }
